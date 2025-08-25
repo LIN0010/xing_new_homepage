@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>星螢_個人網頁</title>
+	<link rel="shortcut icon" href="./images/X_icon/favicon_home.ico"/>
+	<link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-pink-50 via-purple-50 to-blue-50 text-gray-700 leading-relaxed">
+    <!-- 導航欄 -->
+    <nav class="fixed top-0 w-full bg-white/70 backdrop-blur-md z-50 border-b border-pink-100">
+        <div class="max-w-4xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="#start" class="text-xl font-semibold text-pink-800"><h1>✨ 個人網頁</h1></a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-pink-400 hover:text-pink-600 transition-colors">關於我</a>
+                    <a href="#skills" class="text-pink-400 hover:text-pink-600 transition-colors">算圖</a>
+                    <a href="#characters" class="text-pink-400 hover:text-pink-600 transition-colors">我的角色們</a>
+                    <a href="#projects" class="text-pink-400 hover:text-pink-600 transition-colors">小遊戲</a>
+                    <a href="#contact" class="text-pink-400 hover:text-pink-600 transition-colors">聯絡我</a>
+                </div>
+                <button id="menuBtn" class="md:hidden p-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            <!-- 手機選單 -->
+            <div id="mobileMenu" class="hidden md:hidden mt-4 pb-4 border-t border-pink-100">
+                <div class="flex flex-col space-y-3 pt-4">
+                    <a href="#about" class="text-pink-400 hover:text-pink-600 transition-colors">關於我</a>
+                    <a href="#skills" class="text-pink-400 hover:text-pink-600 transition-colors">算圖</a>
+                    <a href="#characters" class="text-pink-400 hover:text-pink-600 transition-colors">我的角色們</a>
+                    <a href="#projects" class="text-pink-400 hover:text-pink-600 transition-colors">小遊戲</a>
+                    <a href="#contact" class="text-pink-400 hover:text-pink-600 transition-colors">聯絡我</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主要內容 -->
+    <main class="pt-20">
+        <!-- 首頁區塊 -->
+        <section class="min-h-screen flex flex-col justify-center px-6 relative overflow-hidden py-12">
+            <!-- 背景裝飾 -->
+            <div class="absolute inset-0 overflow-hidden">
+                <div class="absolute top-20 left-10 text-pink-300 sparkle">✨</div>
+                <div class="absolute top-40 right-20 text-purple-300 sparkle" style="animation-delay: 0.5s;">⭐</div>
+                <div class="absolute bottom-32 left-20 text-blue-300 sparkle" style="animation-delay: 1s;">💫</div>
+                <div class="absolute top-60 left-1/3 text-pink-200 sparkle" style="animation-delay: 1.5s;">✨</div>
+            </div>
+            
+            <div class="max-w-4xl mx-auto relative z-10">
+                <!-- 上方圖片輪播 -->
+                <div id="start" class="relative mb-16">
+                    <div class="slider-container overflow-hidden rounded-2xl shadow-lg">
+                        <div id="slider" class="flex transition-transform duration-500 ease-in-out">
+                            <!-- 圖片1 - 設計工作 -->
+                            <div class="min-w-full h-80 bg-gradient-to-br from-pink-400 via-purple-400 to-blue-400 flex items-center justify-center text-white relative overflow-hidden">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                                <div class="text-center relative z-10">
+                                    <!--div class="text-6xl mb-4">🎨</div>
+                                    <h3 class="text-xl font-medium mb-2">創意設計師<br>用色彩編織夢想的魔法 </h3-->
+                                    <p class="text-sm opacity-80"></p>
+                                </div>
+                                <!-- 裝飾星星 -->
+                                <div class="absolute top-4 left-4 text-white/60 sparkle">✨</div>
+                                <div class="absolute bottom-4 right-4 text-white/60 sparkle" style="animation-delay: 1s;">⭐</div>
+                            </div>
+                            
+                            <!-- 圖片2 - 開發工作 -->
+                            <div class="min-w-full h-80 bg-gradient-to-br from-purple-400 via-pink-400 to-rose-400 flex items-center justify-center text-white relative overflow-hidden">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                                <div class="text-center relative z-10">
+                                    <!--div class="text-6xl mb-4">💻</div>
+                                    <h3 class="text-xl font-medium mb-2">程式魔法師<br>將想像化為現實的咒語</h3-->
+                                    <p class="text-sm opacity-80"></p>
+                                </div>
+                                <div class="absolute top-4 right-4 text-white/60 sparkle">💫</div>
+                                <div class="absolute bottom-4 left-4 text-white/60 sparkle" style="animation-delay: 0.5s;">✨</div>
+                            </div>
+                            
+                            <!-- 圖片3 - 創意思考 -->
+                            <div class="min-w-full h-80 bg-gradient-to-br from-blue-400 via-purple-400 to-pink-400 flex items-center justify-center text-white relative overflow-hidden">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                                <div class="text-center relative z-10">
+                                    <!--div class="text-6xl mb-4">🌟</div>
+                                    <h3 class="text-xl font-medium mb-2">夢想實現者<br>點亮每一個創意的星光</h3-->
+                                    <p class="text-sm opacity-80"></p>
+                                </div>
+                                <div class="absolute top-4 left-1/4 text-white/60 sparkle">⭐</div>
+                                <div class="absolute bottom-4 right-1/4 text-white/60 sparkle" style="animation-delay: 1.5s;">💫</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 導航按鈕 -->
+                    <button id="prevBtn" class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-pink-600 w-10 h-10 rounded-full shadow-lg transition-all hover-lift">
+                        <svg class="w-5 h-5 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                        </svg>
+                    </button>
+                    <button id="nextBtn" class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-pink-600 w-10 h-10 rounded-full shadow-lg transition-all hover-lift">
+                        <svg class="w-5 h-5 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </button>
+                    
+                    <!-- 指示點 -->
+                    <div class="flex justify-center mt-6 space-x-2">
+                        <button class="indicator w-3 h-3 rounded-full bg-pink-400 transition-all" data-slide="0"></button>
+                        <button class="indicator w-3 h-3 rounded-full bg-pink-200 transition-all" data-slide="1"></button>
+                        <button class="indicator w-3 h-3 rounded-full bg-pink-200 transition-all" data-slide="2"></button>
+                    </div>
+                </div>
+                
+                <!-- 下方簡介內容 -->
+                <div class="grid md:grid-cols-2 gap-12 items-center fade-in">
+                    <!-- 左側照片 -->
+                    <div class="flex justify-center">
+                        <div class="w-60 h-60 bg-gradient-to-br from-pink-400 to-purple-500 rounded-full flex items-center justify-center text-white text-6xl font-light shadow-xl float">
+							<!--img src="my2.png" alt="主控" title="主控" class="w-52 h-52 rounded-full object-cover" onerror="this.style.display='none'; this.parentNode.innerHTML='<span class=\'text-white-500\'>主控</span>';"-->
+							  <img id="avatar" class="w-52 h-52 rounded-full object-cover" alt="主控" title="主控" onerror="this.style.display='none'; this.parentNode.innerHTML='<span class=\'text-white-500\'>主控</span>';">
+                        </div>
+                    </div>
+                    
+                    <!-- 右側文字內容 -->
+                    <div class="text-center md:text-left">
+                        <h1 class="text-4xl md:text-5xl font-light text-pink-800 mb-4">星螢</h1>
+                        <p class="text-xl text-pink-600 mb-6 font-light">✨ AI小白x乙遊骨董級玩家 ✨</p>
+                        <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                            ⚠️ 本帳包含大量 AI 生成 × 原創角色設定內容<br>若你對AI創作敏感，請自由選擇是否繼續停留
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                            <a href="#characters" class="bg-gradient-to-r from-pink-500 to-purple-500 text-white px-8 py-3 rounded-full hover:shadow-lg transition-all hover-lift">
+                                🌟 角色
+                            </a>
+                            <a href="#contact" class="border-2 border-pink-300 text-pink-600 px-8 py-3 rounded-full hover:bg-pink-50 hover:border-pink-400 transition-all hover-lift">
+                                💌 聯絡我
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 角色圖鑑 -->
+        <section id="about" class="py-20 px-6 relative overflow-hidden">
+            <!-- 背景裝飾 -->
+            <div class="absolute inset-0 opacity-20">
+                <div class="absolute top-10 left-10 text-pink-300 sparkle">🌸</div>
+                <div class="absolute top-32 right-20 text-purple-300 sparkle" style="animation-delay: 1s;">🦋</div>
+                <div class="absolute bottom-20 left-20 text-blue-300 sparkle" style="animation-delay: 2s;">💎</div>
+                <div class="absolute top-1/2 right-10 text-pink-200 sparkle" style="animation-delay: 0.5s;">🌟</div>
+            </div>
+            
+            <div class="max-w-6xl mx-auto relative z-10">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-600 mb-4">✨ 關於我 ✨</h2>
+                    <div class="w-24 h-1 bg-gradient-to-r from-pink-500 to-purple-600 mx-auto rounded-full"></div>
+                </div>
+                
+                <!-- 角色卡片 -->
+                <div class="bg-gradient-to-br from-white/95 to-pink-50/95 backdrop-blur-sm rounded-3xl overflow-hidden shadow-2xl border border-white/50 max-w-4xl mx-auto">
+                    <!-- 卡片頂部 - 稀有度 -->
+                    <div class="bg-gradient-to-r from-yellow-400 via-orange-400 to-pink-500 p-4 text-center">
+                        <div class="flex justify-center items-center space-x-2 mb-2">
+                            <span class="text-white text-2xl">☆☆☆☆☆</span>
+                        </div>
+                        <h3 class="text-white font-bold text-xl">角色卡-普普通通創作者</h3>
+                    </div>
+                    
+                    <div class="grid lg:grid-cols-2 gap-8 p-8">
+                        <!-- 左側角色立繪 -->
+                        <div class="relative">
+                            <div class="relative overflow-hidden rounded-2xl">
+                                <div class="w-full h-96 bg-gradient-to-br from-pink-300 via-purple-300 to-blue-300 flex items-center justify-center text-white relative">
+									<img src="./images/my/my3.png" alt="主控" title="主控" class="w-90 h-90 object-cover rounded-xl" onerror="this.style.display='none'; this.parentNode.innerHTML='<span class=\'text-white-500\'>主控</span>';">
+									<!-- 背景裝飾 -->
+                                    <div class="absolute inset-0 bg-gradient-to-t from-purple-900/20 to-transparent"></div>
+                                    <div class="absolute top-4 right-4 text-white/40 sparkle">✨</div>
+                                    <div class="absolute bottom-4 left-4 text-white/40 sparkle" style="animation-delay: 1s;">⭐</div>
+                                    <div class="absolute top-1/3 left-4 text-white/30 sparkle" style="animation-delay: 2s;">💫</div>
+                                    
+                                    <!-- 角色主體 -->
+                                    <!--div class="text-center z-10">
+                                        <div class="text-8xl font-light mb-4 float">星</div>
+                                        <div class="text-lg opacity-90">螢or營or瑩</div>
+                                    </div-->
+                                </div>
+                            </div>
+				<!-- 四個可翻轉方塊 -->
+				<div class="mt-6 grid grid-cols-2 gap-4">
+				  <!-- 卡片 1 -->
+				  <button class="flip-wrap relative h-40 rounded-2xl w-full focus:outline-none">
+					<div class="flip-3d w-full h-full rounded-2xl shadow-md">
+					  <!-- 正面：圖片 -->
+					  <div class="flip-face absolute inset-0 rounded-2xl overflow-hidden">
+						<img src="./images/about_me/about_me1.png" alt="內向雷達"
+							 class="w-full h-full object-cover" loading="lazy" decoding="async">
+						<div class="absolute inset-0 bg-gradient-to-t from-white/40 to-transparent"></div>
+					  </div>
+					  <!-- 背面：說明 -->
+					  <div class="flip-face flip-back absolute inset-0 rounded-2xl p-3
+								  bg-gradient-to-br from-pink-100 to-purple-100">
+						<div class="h-full flex flex-col justify-center items-start">
+						  <div class="text-pink-700 font-bold text-sm mb-1">內向雷達</div>
+						  <p class="text-gray-600 text-xs leading-snug">
+							社交電量用完會自我斷電，需要獨處充電 🪫➡️🔋
+						  </p>
+						</div>
+					  </div>
+					</div>
+				  </button>
+
+				  <!-- 卡片 2 -->
+				  <button class="flip-wrap relative h-40 rounded-2xl w-full focus:outline-none">
+					<div class="flip-3d w-full h-full rounded-2xl shadow-md">
+					  <div class="flip-face absolute inset-0 rounded-2xl overflow-hidden">
+						<img src="./images/about_me/about_me3.png" alt="靈感觸媒"
+							 class="w-full h-full object-cover" loading="lazy" decoding="async">
+						<div class="absolute inset-0 bg-gradient-to-t from-white/40 to-transparent"></div>
+					  </div>
+					  <div class="flip-face flip-back absolute inset-0 rounded-2xl p-3
+								  bg-gradient-to-br from-purple-100 to-blue-100">
+						<div class="h-full flex flex-col justify-center items-start">
+						  <div class="text-purple-700 font-bold text-sm mb-1">靈感觸媒</div>
+						  <p class="text-gray-600 text-xs leading-snug">
+							開音樂＋喝烏龍茶靈感暴擊 200% 🎶
+						  </p>
+						</div>
+					  </div>
+					</div>
+				  </button>
+
+				  <!-- 卡片 3 -->
+				  <button class="flip-wrap relative h-40 rounded-2xl w-full focus:outline-none">
+					<div class="flip-3d w-full h-full rounded-2xl shadow-md">
+					  <div class="flip-face absolute inset-0 rounded-2xl overflow-hidden">
+						<img src="./images/about_me/about_me4.png" alt="治癒值來源"
+							 class="w-full h-full object-cover" loading="lazy" decoding="async">
+						<div class="absolute inset-0 bg-gradient-to-t from-white/40 to-transparent"></div>
+					  </div>
+					  <div class="flip-face flip-back absolute inset-0 rounded-2xl p-3
+								  bg-gradient-to-br from-blue-100 to-pink-100">
+						<div class="h-full flex flex-col justify-center items-start">
+						  <div class="text-blue-700 font-bold text-sm mb-1">治癒值來源</div>
+						  <p class="text-gray-600 text-xs leading-snug">
+							乙遊劇情 + 小貓咪 = 今天先不厭世 🐱
+						  </p>
+						</div>
+					  </div>
+					</div>
+				  </button>
+
+				  <!-- 卡片 4 -->
+				  <button class="flip-wrap relative h-40 rounded-2xl w-full focus:outline-none">
+					<div class="flip-3d w-full h-full rounded-2xl shadow-md">
+					  <div class="flip-face absolute inset-0 rounded-2xl overflow-hidden">
+						<img src="./images/about_me/about_me5.png" alt="專注模式"
+							 class="w-full h-full object-cover" loading="lazy" decoding="async">
+						<div class="absolute inset-0 bg-gradient-to-t from-white/40 to-transparent"></div>
+					  </div>
+					  <div class="flip-face flip-back absolute inset-0 rounded-2xl p-3
+								  bg-gradient-to-br from-rose-100 to-pink-100">
+						<div class="h-full flex flex-col justify-center items-start">
+						  <div class="text-rose-700 font-bold text-sm mb-1">專注模式</div>
+						  <p class="text-gray-600 text-xs leading-snug">
+							戴耳機 + 畫面全螢幕，世界安靜了 🔇
+						  </p>
+						</div>
+					  </div>
+					</div>
+				  </button>
+				</div>
+
+                            <!-- 指數條 -->
+                            <div class="mt-4 bg-white/80 rounded-2xl p-4">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-blue-700 font-medium">😖 i人程度</span>
+                                    <span class="text-green-600 font-bold">MAX</span>
+                                </div>
+                                <div class="w-full bg-blue-100 rounded-full h-3 overflow-hidden">
+                                    <div class="h-full bg-gradient-to-r from-blue-400 to-green-400 rounded-full heart-beat" style="width: 100%"></div>
+                                </div>
+                            </div>
+                            <div class="mt-4 bg-white/80 rounded-2xl p-4">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-pink-400 font-medium">😗 八卦程度</span>
+                                    <span class="text-purple-600 font-bold">MAX</span>
+                                </div>
+                                <div class="w-full bg-blue-100 rounded-full h-3 overflow-hidden">
+                                    <div class="h-full bg-gradient-to-r from-pink-300 to-purple-400 rounded-full heart-beat" style="width: 100%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 右側角色資訊 -->
+                        <div class="space-y-6">
+                            <!-- 基本資料 -->
+                            <div class="bg-white/80 rounded-2xl p-6">
+                                <h4 class="text-xl font-bold text-pink-800 mb-4 flex items-center">
+                                    <span class="mr-2">📋</span> 小檔案
+                                </h4>
+                                <div class="grid gap-4 text-sm">
+                                    <div>
+                                        <span class="text-gray-500">匿名：</span>
+                                        <span class="text-pink-700 font-medium">星螢、星、鑫鑫</span>
+                                    </div>
+                                    <div>
+                                        <span class="text-gray-500">MBTI：</span>
+                                        <span class="text-pink-700 font-medium">INFP</span>
+                                    </div>
+                                    <div>
+                                        <span class="text-gray-500">遊戲坑：</span>
+                                        <span class="text-pink-700 font-medium">戀與深空、未定、美男系列...</span>
+                                    </div>
+                                    <div>
+                                        <span class="text-gray-500">AI生圖坑：</span>
+                                        <span class="text-pink-700 font-medium">niji、pixai、SD</span>
+                                    </div>
+                                    <div>
+                                        <span class="text-gray-500">其他坑:</span>
+                                        <span class="text-pink-700 font-medium">日漫(主)、Bjd/Mjd、手作</span>
+                                    </div>
+                                    <div>
+                                        <span class="text-gray-500">主控：</span>
+                                        <span class="text-pink-700 font-medium">黑長髮，藍眼，厚劉海，右眼下淚痣<br>
+										(long black hair,aqua blue eyes,Blunt bangs,Mole at the lower right corner of the eye)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- 角色故事 -->
+                            <div class="bg-white/80 rounded-2xl p-6">
+                                <h4 class="text-xl font-bold text-pink-800 mb-4 flex items-center">
+                                    <span class="mr-2">🤪</span> 碎碎念
+                                </h4>
+                                <p class="text-gray-600 leading-relaxed mb-4">
+                                    歡迎來到星螢的創作空間<br>
+                                    這裡有各種我腦中的奇特想像(?)、莫名其妙的作品，我正在用AI的力量一步步建立起這幻想的世界<br>
+                                </p>
+                                <p class="text-gray-600 leading-relaxed">
+                                    現生是大學生，討論課業也不是不可以ww<br>
+									基本上沒有甚麼雷點，長期潛水，歡迎找我聊天，我真的超閒
+                                </p>
+                            </div>
+                            
+                            <!-- 特殊能力 -->
+                            <div class="bg-white/80 rounded-2xl p-6">
+                                <h4 class="text-xl font-bold text-pink-800 mb-4 flex items-center">
+                                    <span class="mr-2">⚡</span> 組成成分
+                                </h4>
+                                <div class="space-y-3">
+                                    <div class="flex items-center justify-between p-3 bg-gradient-to-r from-pink-100 to-purple-100 rounded-xl">
+                                        <div class="flex items-center">
+                                            <span class="text-2xl mr-3">🪽</span>
+                                            <div>
+                                                <div class="font-medium text-pink-700">想像力</div>
+                                                <div class="text-sm text-gray-500">天馬行空</div>
+                                            </div>
+                                        </div>
+                                        <div class="text-pink-600 font-bold">Lv.7</div>
+                                    </div>
+                                    
+                                    <div class="flex items-center justify-between p-3 bg-gradient-to-r from-purple-100 to-blue-100 rounded-xl">
+                                        <div class="flex items-center">
+                                            <span class="text-2xl mr-3">👣</span>
+                                            <div>
+                                                <div class="font-medium text-purple-700">行動力</div>
+                                                <div class="text-sm text-gray-500">沒有行動就沒有失敗</div>
+                                            </div>
+                                        </div>
+                                        <div class="text-purple-600 font-bold">Lv.1</div>
+                                    </div>
+                                    
+                                    <div class="flex items-center justify-between p-3 bg-gradient-to-r from-blue-100 to-pink-100 rounded-xl">
+                                        <div class="flex items-center">
+                                            <span class="text-2xl mr-3">⏱️</span>
+                                            <div>
+                                                <div class="font-medium text-blue-700">拖延症</div>
+                                                <div class="text-sm text-gray-500">能拖就拖，不能拖也拖</div>
+                                            </div>
+                                        </div>
+                                        <div class="text-blue-600 font-bold">Lv.MAX</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 興趣 -->
+        <section id="skills" class="py-20 px-6 bg-gradient-to-br from-purple-900/10 to-pink-900/10 relative overflow-hidden">
+            <!-- 背景星空效果 -->
+            <div class="absolute inset-0">
+                <div class="absolute top-10 left-1/4 text-pink-300 sparkle">✨</div>
+                <div class="absolute top-32 right-1/3 text-purple-300 sparkle" style="animation-delay: 1s;">⭐</div>
+                <div class="absolute bottom-20 left-1/3 text-blue-300 sparkle" style="animation-delay: 2s;">💫</div>
+                <div class="absolute top-1/2 right-1/4 text-pink-200 sparkle" style="animation-delay: 0.5s;">🌟</div>
+                <div class="absolute bottom-32 right-10 text-purple-200 sparkle" style="animation-delay: 1.5s;">✨</div>
+            </div>
+            
+            <div class="max-w-6xl mx-auto relative z-10">
+				<div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-600 mb-4">⚡ 算圖 ⚡</h2>
+                    <div class="w-24 h-1 bg-gradient-to-r from-pink-500 to-purple-600 mx-auto rounded-full"></div>
+                    <p class="text-pink-700 mt-4 text-lg">p值/LoRA分享</p>
+                </div>
+			<!-- Posts Grid -->
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+				<!-- Post 1 -->
+				<div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow">
+					<!-- Post Header -->
+					<div class="flex items-center p-3">
+						<div class="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white text-sm font-bold mr-3">
+							<img src="./images/my/my4.png" alt="星螢" title="星螢" class="w-8 h-8 rounded-full object-cover" onerror="this.style.display='none'; this.parentNode.innerHTML='<span class=\'text-white-500\'>星螢</span>';">
+						</div>
+						<div>
+							<p class="text-sm font-semibold text-gray-800">xin_550052</p>
+							<p class="text-xs text-gray-500">2小時前</p>
+						</div>
+					</div>
+					<div class="p-4">
+						<div class="carousel-viewport relative overflow-hidden rounded-lg">
+							<div class="carousel-container flex transition-transform duration-300 ease-in-out" data-current="0">
+							    <div class="carousel-slide px-2">
+									<div class="post-image bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center text-white text-4xl flex-shrink-0 w-full">
+										<img src="./images/about_me/post1_2.png" alt="h4j5pnd" title="h4j5pnd" class="object-cover" onerror="this.style.display='none'; this.parentNode.innerHTML='<span class=\'text-white-500\'>h4j5pnd</span>';">
+									</div>
+								</div>
+								<div class="carousel-slide px-2">
+									<div class="post-image bg-gradient-to-br from-purple-400 to-pink-500 flex items-center justify-center text-white text-4xl flex-shrink-0 w-full">
+										<img src="./images/about_me/post1_3.png" alt="diwsoh7" title="diwsoh7" class="object-cover" onerror="this.style.display='none'; this.parentNode.innerHTML='<span class=\'text-white-500\'>diwsoh7</span>';">
+									</div>
+								</div>
+								<div class="carousel-slide px-2">
+									<div class="post-image bg-gradient-to-br from-pink-400 to-red-500 flex items-center justify-center text-white text-4xl flex-shrink-0 w-full">
+										<img src="./images/about_me/post1_1.png" alt="h4j5pnd" title="h4j5pnd" class="object-cover" onerror="this.style.display='none'; this.parentNode.innerHTML='<span class=\'text-white-500\'>h4j5pnd</span>';">
+									</div>
+								</div>
+							</div>
+							<!-- Navigation Arrows -->
+							<button class="absolute left-2 top-1/2 -translate-y-1/2 bg-white/50 text-white p-2 rounded-full hover:scale-110 transition-transform" onclick="previousImage(this)">
+								<svg class="w-4 h-4 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+								</svg>
+							</button>
+							<button class="absolute right-2 top-1/2 -translate-y-1/2 bg-white/50 text-white p-2 rounded-full hover:scale-110 transition-transform" onclick="nextImage(this)">
+								<svg class="w-4 h-4 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+								</svg>
+							</button>
+							<!-- Dots Indicator -->
+							<div class="absolute bottom-3 left-1/2 transform -translate-x-1/2 flex space-x-2">
+								<div class="w-2 h-2 bg-white bg-opacity-70 rounded-full dot active"></div>
+								<div class="w-2 h-2 bg-white bg-opacity-50 rounded-full dot"></div>
+								<div class="w-2 h-2 bg-white bg-opacity-50 rounded-full dot"></div>
+							</div>
+							<button class="absolute top-1 right-12 p-2 bg-black bg-opacity-20 rounded-full text-white hover:bg-opacity-30 transition-all" onclick="toggleLike(this)">
+								<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
+								</svg>
+							</button>
+						</div>
+					</div>
+					<div class="p-4">
+						<div class="flex items-center justify-between mb-2">
+							<div class="flex items-center space-x-2">
+								<button class="flex items-center gap-1 text-gray-600" onclick="toggleLike(this)">									<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+									</svg>
+									<span class="like-count">24</span>
+								</button>
+								<button class="comment-btn flex items-center space-x-1 text-gray-600 hover:text-blue-500 transition-colors">
+									<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+									</svg>
+									<span class="comment-count">2</span>
+								</button>
+								<button class="share-btn flex items-center space-x-1 text-gray-600 hover:text-blue-500 transition-colors" onclick="sharePost(this)">
+									<svg class="w-5 h-5 transform rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+									</svg>
+									<span class="share-count">19</span>
+								</button>
+							</div>
+
+						</div>
+						<p class="text-gray-800 text-sm mb-2">人物篇</p>
+						<p class="text-gray-600 text-xs mb-3">平台：Niji<br>p值：h4j5pnd、diwsoh7</p>
+						
+						<!-- Comments Section -->
+						<div class="border-t border-gray-100 pt-3">
+							<div class="flex items-start space-x-2 mb-2">
+								<div class="w-6 h-6 bg-gradient-to-br from-pink-400 to-red-400 rounded-full flex items-center justify-center text-white text-xs font-bold">
+									<img src="./images/about_his/xun.png" alt="星洵" title="星洵" class="w-6 h-6 rounded-full object-cover" onerror="this.style.display='none'; this.parentNode.innerHTML='<span class=\'text-white-500\'>星洵</span>';">
+								</div>
+								<div class="flex-1">
+									<p class="text-xs text-gray-800"><span class="font-semibold">xun_119</span>&nbsp有些照片可以不放公開...</p>
+								</div>
+							</div>
+							<div class="flex items-start space-x-2">
+								<div class="w-6 h-6 bg-gradient-to-br from-blue-400 to-purple-400 rounded-full flex items-center justify-center text-white text-xs font-bold">
+									<img src="./images/about_his/yan.png" alt="洛晏" title="洛晏" class="w-6 h-6 rounded-full object-cover" onerror="this.style.display='none'; this.parentNode.innerHTML='<span class=\'text-white-500\'>洛晏</span>';">
+								</div>
+								<div class="flex-1">
+									<p class="text-xs text-gray-800"><span class="font-semibold">23_yanluo</span> 審美不錯</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Post 2 -->
+				<div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow">
+					<!-- Post Header -->
+					<div class="flex items-center p-3">
+						<div class="w-8 h-8 bg-gradient-to-br from-green-500 to-teal-600 rounded-full flex items-center justify-center text-white text-sm font-bold mr-3">
+							<img src="./images/my/my4.png" alt="星螢" title="星螢" class="w-8 h-8 rounded-full object-cover" onerror="this.style.display='none'; this.parentNode.innerHTML='<span class=\'text-white-500\'>星螢</span>';">
+						</div>
+						<div>
+							<p class="text-sm font-semibold text-gray-800">xin_550052</p>
+							<p class="text-xs text-gray-500">5小時前</p>
+						</div>
+					</div>
+					<div class="p-4">
+						<div class="carousel-viewport relative overflow-hidden rounded-lg">
+							<div class="carousel-container flex transition-transform duration-300 ease-in-out" data-current="0">
+								<div class="carousel-slide px-2">   <!-- px-2 就是你要的左右間距 -->
+									<div class="post-image bg-gradient-to-br from-green-400 to-blue-500 flex items-center justify-center text-white text-4xl flex-shrink-0 w-full">
+										<img src="./images/about_me/post2_2.png" alt="3u3yksp" title="3u3yksp" class="object-cover" onerror="this.style.display='none'; this.parentNode.innerHTML='<span class=\'text-white-500\'>3u3yksp</span>';">
+									</div>
+								</div>
+								<div class="carousel-slide px-2">   <!-- px-2 就是你要的左右間距 -->
+									<div class="post-image bg-gradient-to-br from-teal-400 to-green-500 flex items-center justify-center text-white text-4xl flex-shrink-0 w-full">
+										<img src="./images/about_me/post2_5.png" alt="3u3yksp" title="3u3yksp" class="object-cover" onerror="this.style.display='none'; this.parentNode.innerHTML='<span class=\'text-white-500\'>3u3yksp</span>';">
+									</div>
+								</div>
+								<div class="carousel-slide px-2">   <!-- px-2 就是你要的左右間距 -->
+									<div class="post-image bg-gradient-to-br from-emerald-400 to-teal-500 flex items-center justify-center text-white text-4xl flex-shrink-0 w-full">
+										<img src="./images/about_me/post2_4.png" alt="3u3yksp" title="3u3yksp" class="object-cover" onerror="this.style.display='none'; this.parentNode.innerHTML='<span class=\'text-white-500\'>3u3yksp</span>';">
+									</div>
+								</div>
+							</div>
+							<!-- Navigation Arrows -->
+							<button class="absolute left-2 top-1/2 -translate-y-1/2 bg-white/50 text-white p-2 rounded-full hover:scale-110 transition-transform" onclick="previousImage(this)">
+								<svg class="w-4 h-4 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+								</svg>
+							</button>
+							<button class="absolute right-2 top-1/2 -translate-y-1/2 bg-white/50 text-white p-2 rounded-full hover:scale-110 transition-transform" onclick="nextImage(this)">
+								<svg class="w-4 h-4 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+								</svg>
+							</button>
+							<!-- Dots Indicator -->
+							<div class="absolute bottom-3 left-1/2 transform -translate-x-1/2 flex space-x-2">
+								<div class="w-2 h-2 bg-white bg-opacity-70 rounded-full dot active"></div>
+								<div class="w-2 h-2 bg-white bg-opacity-50 rounded-full dot"></div>
+								<div class="w-2 h-2 bg-white bg-opacity-50 rounded-full dot"></div>
+							</div>
+							<button class="absolute top-1 right-12 p-2 bg-black bg-opacity-20 rounded-full text-white hover:bg-opacity-30 transition-all" onclick="toggleLike(this)">
+								<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
+								</svg>
+							</button>
+						</div>
+					</div>
+					<div class="p-4">
+						<div class="flex items-center justify-between mb-2">
+							<div class="flex items-center space-x-2">
+								<button class="flex items-center gap-1 text-gray-600" onclick="toggleLike(this)">									<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+									</svg>
+									<span class="like-count">18</span>
+								</button>
+								<button class="comment-btn flex items-center space-x-1 text-gray-600 hover:text-blue-500 transition-colors">
+									<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+									</svg>
+									<span class="comment-count">2</span>
+								</button>
+								<button class="share-btn flex items-center space-x-1 text-gray-600 hover:text-blue-500 transition-colors" onclick="sharePost(this)">
+									<svg class="w-5 h-5 transform rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+									</svg>
+									<span class="share-count">6</span>
+								</button>
+							</div>
+
+						</div>
+						<p class="text-gray-800 text-sm mb-2">場景篇</p>
+						<p class="text-gray-600 text-xs mb-3">平台：Niji<br>p值：3u3yksp</p>
+						
+						<!-- Comments Section -->
+						<div class="border-t border-gray-100 pt-3">
+							<div class="flex items-start space-x-2 mb-2">
+								<div class="w-6 h-6 bg-gradient-to-br from-green-400 to-teal-400 rounded-full flex items-center justify-center text-white text-xs font-bold">
+									<img src="./images/about_his/yi.png" alt="弦一" title="弦一" class="w-6 h-6 rounded-full object-cover" onerror="this.style.display='none'; this.parentNode.innerHTML='<span class=\'text-white-500\'>弦一</span>';">
+								</div>
+								<div class="flex-1">
+									<p class="text-xs text-gray-800"><span class="font-semibold">_shian_0130</span> 突然走文青風?</p>
+								</div>
+							</div>
+							<div class="flex items-start space-x-2">
+								<div class="w-6 h-6 bg-gradient-to-br from-yellow-400 to-orange-400 rounded-full flex items-center justify-center text-white text-xs font-bold">
+									<img src="./images/about_his/Riven.png" alt="Riven" title="Riven" class="w-6 h-6 rounded-full object-cover" onerror="this.style.display='none'; this.parentNode.innerHTML='<span class=\'text-white-500\'>Riven</span>';">
+								</div>
+								<div class="flex-1">
+									<p class="text-xs text-gray-800"><span class="font-semibold">demonR@88</span> You always go find pretty views when I’m not around. Suspicious behavior.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Post 3 -->
+				<div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow">
+					<!-- Post Header -->
+					<div class="flex items-center p-3">
+						<div class="w-8 h-8 bg-gradient-to-br from-orange-500 to-red-600 rounded-full flex items-center justify-center text-white text-sm font-bold mr-3">
+							<img src="./images/my/my4.png" alt="星螢" title="星螢" class="w-8 h-8 rounded-full object-cover" onerror="this.style.display='none'; this.parentNode.innerHTML='<span class=\'text-white-500\'>星螢</span>';">
+						</div>
+						<div>
+							<p class="text-sm font-semibold text-gray-800">xin_550052</p>
+							<p class="text-xs text-gray-500">1天前</p>
+						</div>
+					</div>
+					<div class="p-4">
+						<div class="carousel-viewport relative overflow-hidden rounded-lg">
+							<div class="carousel-container flex transition-transform duration-300 ease-in-out" data-current="0">
+								<div class="carousel-slide px-2">   <!-- px-2 就是你要的左右間距 -->
+									<div class="post-image bg-gradient-to-br from-orange-400 to-red-500 flex items-center justify-center text-white text-4xl flex-shrink-0 w-full">
+										<img src="./images/about_me/post3_1.png" alt="兔寶" title="兔寶" class="object-cover" onerror="this.style.display='none'; this.parentNode.innerHTML='<span class=\'text-white-500\'>兔寶</span>';">
+									</div>
+								</div>
+								<div class="carousel-slide px-2">   <!-- px-2 就是你要的左右間距 -->
+									<div class="post-image bg-gradient-to-br from-red-400 to-pink-500 flex items-center justify-center text-white text-4xl flex-shrink-0 w-full">
+										<img src="./images/about_me/post3_2.png" alt="美女" title="美女" class="object-cover" onerror="this.style.display='none'; this.parentNode.innerHTML='<span class=\'text-white-500\'>美女</span>';">
+									</div>
+								</div>
+								<div class="carousel-slide px-2">   <!-- px-2 就是你要的左右間距 -->
+									<div class="post-image bg-gradient-to-br from-purple-400 to-indigo-500 flex items-center justify-center text-white text-4xl flex-shrink-0 w-full">
+										<img src="./images/about_me/post3_3.png" alt="兔寶" title="兔寶" class="object-cover" onerror="this.style.display='none'; this.parentNode.innerHTML='<span class=\'text-white-500\'>兔寶</span>';">
+									</div>
+								</div>
+							</div>
+							<!-- Navigation Arrows -->
+							<button class="absolute left-2 top-1/2 -translate-y-1/2 bg-white/50 text-white p-2 rounded-full hover:scale-110 transition-transform" onclick="previousImage(this)">
+								<svg class="w-4 h-4 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+								</svg>
+							</button>
+							<button class="absolute right-2 top-1/2 -translate-y-1/2 bg-white/50 text-white p-2 rounded-full hover:scale-110 transition-transform" onclick="nextImage(this)">
+								<svg class="w-4 h-4 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+								</svg>
+							</button>
+							<!-- Dots Indicator -->
+							<div class="absolute bottom-3 left-1/2 transform -translate-x-1/2 flex space-x-2">
+								<div class="w-2 h-2 bg-white bg-opacity-70 rounded-full dot active"></div>
+								<div class="w-2 h-2 bg-white bg-opacity-50 rounded-full dot"></div>
+								<div class="w-2 h-2 bg-white bg-opacity-50 rounded-full dot"></div>
+							</div>
+							<button class="absolute top-1 right-12 p-2 bg-black bg-opacity-20 rounded-full text-white hover:bg-opacity-30 transition-all" onclick="toggleLike(this)">
+								<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
+								</svg>
+							</button>
+						</div>
+					</div>
+					<div class="p-4">
+						<div class="flex items-center justify-between mb-2">
+							<div class="flex items-center space-x-2">
+								<button class="flex items-center gap-1 text-gray-600" onclick="toggleLike(this)">
+								  <!-- 愛心圖示：預設空心 -->
+									<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+									</svg>
+								  <span class="like-count">12</span>
+								</button>
+								<button class="comment-btn flex items-center space-x-1 text-gray-600 hover:text-blue-500 transition-colors">
+									<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+									</svg>
+									<span class="comment-count">2</span>
+								</button>
+								<button class="share-btn flex items-center space-x-1 text-gray-600 hover:text-blue-500 transition-colors" onclick="sharePost(this)">
+									<svg class="w-5 h-5 transform rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+									</svg>
+									<span class="share-count">10</span>
+								</button>
+							</div>
+
+						</div>
+						<p class="text-gray-800 text-sm mb-2">微色氣篇(?</p>
+						<p class="text-gray-600 text-xs mb-3">平台：Stable Diffusion<br>check point：Anime ArtFlow Illustrious-XL<br>LoRA：Paradiso - Illus x Niji [[BETA]]</p>
+						
+						<!-- Comments Section -->
+						<div class="border-t border-gray-100 pt-3">
+							<div class="flex items-start space-x-2 mb-2">
+								<div class="w-6 h-6 bg-gradient-to-br from-purple-400 to-indigo-400 rounded-full flex items-center justify-center text-white text-xs font-bold">
+									<img src="./images/about_his/Riven.png" alt="Riven" title="Riven" class="w-6 h-6 rounded-full object-cover" onerror="this.style.display='none'; this.parentNode.innerHTML='<span class=\'text-white-500\'>Riven</span>';">
+								</div>
+								<div class="flex-1">
+									<p class="text-xs text-gray-800"><span class="font-semibold">demonR@88</span> Hey babe, wanna tell me why my feed looks like a thirst trap warzone tonight?</p>
+								</div>
+							</div>
+							<div class="flex items-start space-x-2">
+								<div class="w-6 h-6 bg-gradient-to-br from-red-400 to-pink-400 rounded-full flex items-center justify-center text-white text-xs font-bold">
+									<img src="./images/about_his/xun.png" alt="星洵" title="星洵" class="w-6 h-6 rounded-full object-cover" onerror="this.style.display='none'; this.parentNode.innerHTML='<span class=\'text-white-500\'>星洵</span>';">
+								</div>
+								<div class="flex-1">
+									<p class="text-xs text-gray-800"><span class="font-semibold">xun_119</span> 請妳屏蔽我妹，她還小</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+            </div>
+        </section>
+
+	<!-- 我的角色們 -->
+	<section id="characters" class="py-20 px-6 bg-gradient-to-br from-pink-50 via-purple-50 to-blue-50 relative overflow-hidden">
+	  <!-- 背景裝飾（同調淡色） -->
+	  <div class="absolute inset-0 opacity-10">
+		<div class="absolute top-10 left-1/4 text-pink-200 sparkle">✨</div>
+		<div class="absolute top-32 right-1/3 text-purple-200 sparkle" style="animation-delay: 1s;">⭐</div>
+		<div class="absolute bottom-20 left-1/3 text-blue-200 sparkle" style="animation-delay: 2s;">💫</div>
+		<div class="absolute top-1/2 right-1/4 text-pink-100 sparkle" style="animation-delay: 0.5s;">🌟</div>
+	  </div>
+
+	  <div class="max-w-6xl mx-auto relative z-10">
+		<div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-600 mb-4">💫 我的角色們 💫</h2>
+		  <div class="w-24 h-1 bg-gradient-to-r from-pink-500 to-purple-600 mx-auto rounded-full mb-4"></div>
+		  <p class="text-pink-700 text-lg">每個角色都有著獨特的故事與個性 </br> 註：頁面中皆為75角色，其餘角色將陸續公開</p>
+		</div>
+
+		<!-- 角色卡片網格：手機1欄 / sm 2欄 / md 3欄 / lg 4欄 -->
+		<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+
+		  <!-- 角色1 - 小美 -->
+		  <div class="group relative">
+			<div class="bg-white/90 backdrop-blur-sm rounded-3xl overflow-hidden shadow-xl border border-white/50 hover:scale-105 transition-all duration-300">
+			  <!-- 頭像區：白→粉（下到上），白霧罩層 -->
+			  <div class="relative h-64 bg-gradient-to-t from-pink-100 to-white overflow-hidden">
+				<div class="absolute top-4 right-4 bg-pink-400 text-white px-3 py-1 rounded-full text-sm font-bold z-30">死對頭</div>
+				<div class="absolute inset-0 bg-gradient-to-t from-white/20 to-transparent z-10"></div>
+				<div class="flex items-center justify-center h-full">
+				  <div class="text-center z-10">
+					<img src="./images/about_his/yi2.png" alt="讀檔失敗(重刷一下網頁吧)" title="狼" class="w-52 h-52 object-cover" onerror="this.style.display='none'; this.parentNode.innerHTML='<span class=\'text-white-500\'>讀檔失敗(重刷一下網頁吧)</span>';">
+					<!--div class="text-6xl mb-4 float">👧</div>
+					<div class="text-pink-800 text-lg font-medium">小美</div-->
+				  </div>
+				</div>
+			  </div>
+
+			  <!-- 資訊（保留你的細節） -->
+			  <div class="p-6">
+				<h3 class="text-xl font-bold text-pink-800 mb-2">時弦一---極致純愛</h3>
+				<p class="text-gray-600 text-sm mb-4">炸毛外殼下的偏執孤狼，內心只為妳軟得一塌糊塗。</p>
+				<div class="space-y-2 mb-4">
+				  <div class="flex justify-between text-sm"><span class="text-gray-500">年齡：</span><span class="text-pink-800">18歲</span></div>
+				  <div class="flex justify-between text-sm"><span class="text-gray-500">性格：</span><span class="text-pink-800">刀子嘴豆腐心</span></div>
+				  <div class="flex justify-between text-sm"><span class="text-gray-500">特長：</span><span class="text-pink-800">會讀書(但通常不)</span></div>
+				</div>
+				<button class="prepare-btn w-full bg-pink-400 hover:bg-purple-500 text-white py-2 rounded-xl font-medium transition-all" data-key="yi">
+				  查看詳細資料
+				</button>
+				<!--button class="jump-btn w-full bg-pink-400 hover:bg-purple-500 text-white py-2 rounded-xl font-medium transition-all" data-url="./AI_make_picture/AI_make_picture.html">查看詳細資料</button-->
+			  </div>
+			</div>
+		  </div>
+
+		  <!-- 角色2 - 小王 -->
+		  <div class="group relative">
+			<div class="bg-white/90 backdrop-blur-sm rounded-3xl overflow-hidden shadow-xl border border-white/50 hover:scale-105 transition-all duration-300">
+			  <!-- 頭像區：白→紫 -->
+			  <div class="relative h-64 bg-gradient-to-t from-green-100 to-white overflow-hidden">
+				<div class="absolute top-4 right-4 bg-green-400 text-white px-3 py-1 rounded-full text-sm font-bold z-30">黑幫</div>
+				<div class="absolute inset-0 bg-gradient-to-t from-white/20 to-transparent z-10"></div>
+				<div class="flex items-center justify-center h-full">
+				  <div class="text-center z-10">
+					<img src="./images/about_his/yan.png" alt="讀檔失敗(重刷一下網頁吧)" title="豹" class="w-52 h-52 object-cover" onerror="this.style.display='none'; this.parentNode.innerHTML='<span class=\'text-white-500\'>讀檔失敗(重刷一下網頁吧)</span>';">
+					<!--div class="text-6xl mb-4 float" style="animation-delay: .5s;">👦</div>
+					<div class="text-green-800 text-lg font-medium">小王</div-->
+				  </div>
+				</div>
+			  </div>
+
+			  <!-- 資訊（保留你的細節） -->
+			  <div class="p-6">
+				<h3 class="text-xl font-bold text-green-800 mb-2">許洛晏---花花公子哥</h3>
+				<p class="text-gray-600 text-sm mb-4">被嬌生慣養的小兒子，看淡了人情事故，最喜歡用高超的手腕，讓人落入自己設的陷阱。</p>
+				<div class="space-y-2 mb-4">
+				  <div class="flex justify-between text-sm"><span class="text-gray-500">年齡：</span><span class="text-green-800">23歲</span></div>
+				  <div class="flex justify-between text-sm"><span class="text-gray-500">性格：</span><span class="text-green-800">心機</span></div>
+				  <div class="flex justify-between text-sm"><span class="text-gray-500">特長：</span><span class="text-green-800">武力制服</span></div>
+				</div>
+				<button class="prepare-btn w-full bg-green-400 hover:bg-blue-500 text-white py-2 rounded-xl font-medium transition-all" data-key="yan">
+				  查看詳細資料
+				</button>
+				<!--button class="w-full bg-green-400 hover:bg-blue-500 text-white py-2 rounded-xl font-medium transition-all">查看詳細資料</button-->
+			  </div>
+			</div>
+		  </div>
+		  <!-- 角色3 - 小王 -->
+		  <div class="group relative">
+			<div class="bg-white/90 backdrop-blur-sm rounded-3xl overflow-hidden shadow-xl border border-white/50 hover:scale-105 transition-all duration-300">
+			  <!-- 頭像區：白→紫 -->
+			  <div class="relative h-64 bg-gradient-to-t from-purple-100 to-white overflow-hidden">
+				<div class="absolute top-4 right-4 bg-purple-400 text-white px-3 py-1 rounded-full text-sm font-bold z-30">哥哥</div>
+				<div class="absolute inset-0 bg-gradient-to-t from-white/20 to-transparent z-10"></div>
+				<div class="flex items-center justify-center h-full">
+				  <div class="text-center z-10">
+					<img src="./images/about_his/xun.png" alt="讀檔失敗(重刷一下網頁吧)" title="貓" class="w-52 h-52 object-cover" onerror="this.style.display='none'; this.parentNode.innerHTML='<span class=\'text-white-500\'>讀檔失敗(重刷一下網頁吧)</span>';">
+					<!--div class="text-6xl mb-4 float" style="animation-delay: .5s;">👦</div>
+					<div class="text-purple-800 text-lg font-medium">小王</div-->
+				  </div>
+				</div>
+			  </div>
+
+			  <!-- 資訊（保留你的細節） -->
+			  <div class="p-6">
+				<h3 class="text-xl font-bold text-purple-800 mb-2">星洵---偏執x隱忍</h3>
+				<p class="text-gray-600 text-sm mb-4">總是戴著眼鏡，眼神空洞、疲倦，彷彿在自己的世界裡游走。
+				然而，他的內心卻隱藏著秘密。</p>
+				<div class="space-y-2 mb-4">
+				  <div class="flex justify-between text-sm"><span class="text-gray-500">年齡：</span><span class="text-purple-800">22歲</span></div>
+				  <div class="flex justify-between text-sm"><span class="text-gray-500">性格：</span><span class="text-purple-800">理性冷靜(多數時候)</span></div>
+				  <div class="flex justify-between text-sm"><span class="text-gray-500">特長：</span><span class="text-purple-800">軟體應用</span></div>
+				</div>
+				<button class="prepare-btn w-full bg-purple-400 hover:bg-pink-400 text-white py-2 rounded-xl font-medium transition-all" data-key="xun">
+				  查看詳細資料
+				</button>
+				<!--button class="w-full bg-purple-400 hover:bg-pink-400 text-white py-2 rounded-xl font-medium transition-all">查看詳細資料</button-->
+			  </div>
+			</div>
+		  </div>
+		  <!-- 角色4 - 大同 -->
+		  <div class="group relative">
+			<div class="bg-white/90 backdrop-blur-sm rounded-3xl overflow-hidden shadow-xl border border-white/50 hover:scale-105 transition-all duration-300">
+			  <!-- 頭像區：白→藍 -->
+			  <div class="relative h-64 bg-gradient-to-t from-blue-100 to-white overflow-hidden">
+				<div class="absolute top-4 right-4 bg-blue-400 text-white px-3 py-1 rounded-full text-sm font-bold z-30">樂團主唱</div>
+				<div class="absolute inset-0 bg-gradient-to-t from-white/20 to-transparent z-10"></div>
+				<div class="flex items-center justify-center h-full">
+				  <div class="text-center z-10">
+					<img src="./images/about_his/Riven.png" alt="讀檔失敗(重刷一下網頁吧)" title="狐" class="w-52 h-52 object-cover" onerror="this.style.display='none'; this.parentNode.innerHTML='<span class=\'text-white-500\'>讀檔失敗(重刷一下網頁吧)</span>';">
+					<!--div class="text-6xl mb-4 float" style="animation-delay: 1s;">👨</div>
+					<div class="text-blue-800 text-lg font-medium">大同</div-->
+				  </div>
+				</div>
+			  </div>
+
+			  <!-- 資訊（保留你的細節） -->
+			  <div class="p-6">
+				<h3 class="text-xl font-bold text-blue-800 mb-2">Riven---魅魔嗓音</h3>
+				<p class="text-gray-600 text-sm mb-4">舞台上的他，是舔著唇吟唱罪孽的惡魔。主張用呻吟寫詩、用喘息破壞。</p>
+				<div class="space-y-2 mb-4">
+				  <div class="flex justify-between text-sm"><span class="text-gray-500">年齡：</span><span class="text-blue-800">22歲</span></div>
+				  <div class="flex justify-between text-sm"><span class="text-gray-500">性格：</span><span class="text-blue-800">縱慾的瘋子</span></div>
+				  <div class="flex justify-between text-sm"><span class="text-gray-500">特長：</span><span class="text-blue-800">唱歌作曲</span></div>
+				</div>
+				<button class="prepare-btn w-full bg-blue-400 hover:bg-purple-400 text-white py-2 rounded-xl font-medium transition-all" data-key="Riven">
+				  查看詳細資料
+				</button>
+				<!--button class="w-full bg-blue-400 hover:bg-purple-400 text-white py-2 rounded-xl font-medium transition-all">查看詳細資料</button-->
+			  </div>
+			</div>
+		  </div>
+
+		</div>
+
+		<!-- 更多角色提示（同調） -->
+		<div class="text-center mt-16">
+		  <div class="bg-white/60 backdrop-blur-sm rounded-3xl p-8 border border-white/50 inline-block">
+			<h3 class="text-xl font-bold text-purple-800 mb-4">🎭 還有更多角色</h3>
+			<p class="text-gray-600 mb-6">我的創作世界中還有許多有趣的角色等待與你見面...</p>
+			<!--button class="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-2xl font-medium transition-all duration-300 hover:scale-105">
+			  探索完整角色圖鑑
+			</button-->
+		  </div>
+		</div>
+
+	  </div>
+	</section>
+
+        <!-- 作品展示館 -->
+        <section id="projects" class="py-20 px-6 relative overflow-hidden">
+            <!-- 背景裝飾 -->
+            <div class="absolute inset-0 opacity-5">
+                <div class="absolute top-0 left-0 w-full h-full">
+                    <svg viewBox="0 0 100 100" class="w-full h-full">
+                        <defs>
+                            <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
+                                <path d="M 10 0 L 0 0 0 10" fill="none" stroke="currentColor" stroke-width="0.5"/>
+                            </pattern>
+                        </defs>
+                        <rect width="100" height="100" fill="url(#grid)" />
+                    </svg>
+                </div>
+            </div>
+            
+            <div class="max-w-6xl mx-auto relative z-10">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-600 mb-4">🏛️ 小遊戲</h2>
+                    <div class="w-24 h-1 bg-gradient-to-r from-pink-500 to-purple-600 mx-auto rounded-full mb-4"></div>
+                    <p class="text-pink-700 text-lg">建議筆電或桌機使用，<br>腦洞產物很爛所以不看也沒差</p>
+                </div>
+                
+                <!-- 作品卡片 -->
+                <div class="grid lg:grid-cols-2 gap-12">
+                    <!-- 作品1 - 電商平台 -->
+                    <div class="group relative">
+                        <div class="bg-gradient-to-br from-white/95 to-purple-50/95 backdrop-blur-sm rounded-3xl overflow-hidden shadow-2xl border border-white/50 hover:scale-105 transition-all duration-500">
+                            <!-- 作品預覽區 -->
+							<div class="relative h-64 bg-gradient-to-br from-pink-500 to-rose-600 overflow-hidden flex items-center justify-center">
+								<img src="./images/game/game1.png" alt="預覽圖"
+								   class="w-[500px] h-52 object-cover rounded-xl shadow-lg">
+                                <!-- 裝飾性UI元素 -->
+                                <div class="absolute inset-4 border-2 border-white/30 rounded-2xl"></div>
+                                <!--div class="absolute top-8 left-8 right-8 h-8 bg-white/20 rounded-lg"></div>
+                                <div class="absolute top-20 left-8 right-8 h-32 bg-white/10 rounded-lg flex items-center justify-center">
+                                    <svg class="w-16 h-16 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                                    </svg>
+                                </div>
+                                <div class="absolute bottom-8 left-8 right-8 h-4 bg-white/20 rounded"></div-->
+                                
+                                <!-- 稀有度標籤 -->
+                                <div class="absolute top-4 right-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-3 py-1 rounded-full text-sm font-bold shadow-lg">
+                                    ☆☆☆☆☆
+                                </div>
+                                
+                                <!-- 懸浮效果 -->
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            </div>
+                            
+                            <!-- 作品資訊 -->
+                            <div class="p-8">
+                                <div class="flex items-center justify-between mb-4">
+                                    <h3 class="text-2xl font-bold text-purple-800">火焰鳥逃亡日</h3>
+                                    <div class="flex items-center space-x-1">
+                                        <span class="text-yellow-500">⭐</span>
+                                        <span class="text-purple-600 font-bold">0.1</span>
+                                    </div>
+                                </div>
+                                
+                                <p class="text-gray-600 mb-6 leading-relaxed">
+                                    一隻可憐的小黃鳥為了不逃離可怕的岩漿地獄而不斷飛翔，路途需跨過長短不一的大柱柱才能活下，並化身為火鳳凰(並沒有
+                                </p>
+                                
+                                <!-- 技術標籤 -->
+                                <div class="flex flex-wrap gap-2 mb-6">
+									<span class="bg-gradient-to-r from-green-500 to-green-600 text-white px-3 py-1 rounded-full text-sm font-medium">JavaScript</span>
+                                    <!--span class="bg-gradient-to-r from-blue-500 to-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">React</span>
+                                    <span class="bg-gradient-to-r from-green-500 to-green-600 text-white px-3 py-1 rounded-full text-sm font-medium">Node.js</span>
+                                    <span class="bg-gradient-to-r from-purple-500 to-purple-600 text-white px-3 py-1 rounded-full text-sm font-medium">MongoDB</span>
+                                    <span class="bg-gradient-to-r from-pink-500 to-pink-600 text-white px-3 py-1 rounded-full text-sm font-medium">Stripe</span-->
+                                </div>
+                                
+                                <!-- 特色功能 -->
+                                <div class="space-y-2 mb-6">
+                                    <div class="flex items-center text-sm text-gray-600">
+                                        <span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                                        似Flappy Bird
+                                    </div>
+                                    <div class="flex items-center text-sm text-gray-600">
+                                        <span class="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                                        難得的全部自己繪製(小鳥超醜)
+                                    </div>
+                                    <div class="flex items-center text-sm text-gray-600">
+                                        <span class="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
+                                        3000分加速一點
+                                    </div>
+                                </div>
+                                
+                                <!-- 行動按鈕 -->
+                                <div class="flex space-x-4">
+                                    <button class="jump-btn flex-1 bg-gradient-to-r from-pink-500 to-rose-500 text-white py-3 rounded-2xl font-medium hover:shadow-lg transition-all duration-300 hover:scale-105" data-url="https://lin0010.github.io/xing-personal-homepage/Flappy_Bird_practice/index.html">
+                                        開始遊戲
+                                    </button>
+                                    <!--button class="px-6 py-3 border-2 border-purple-300 text-purple-600 rounded-2xl font-medium hover:bg-purple-50 transition-colors">
+                                        📱 Live Demo
+                                    </button-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 作品2 - 數據儀表板 -->
+                    <div class="group relative">
+                        <div class="bg-gradient-to-br from-white/95 to-pink-50/95 backdrop-blur-sm rounded-3xl overflow-hidden shadow-2xl border border-white/50 hover:scale-105 transition-all duration-500">
+                            <!-- 作品預覽區 -->
+                            <!--div class="relative h-64 bg-gradient-to-br from-pink-500 to-rose-600 overflow-hidden">
+							<img src="./images/game/game2.png" alt="讀檔失敗(重刷一下網頁吧)" title="預覽圖" class="w-60 h-52 object-cover" onerror="this.style.display='none'; this.parentNode.innerHTML='<span class=\'text-white-500\'>讀檔失敗(重刷一下網頁吧)</span>';"-->
+                            <div class="relative h-64 bg-gradient-to-br from-blue-500 to-purple-600 overflow-hidden flex items-center justify-center">
+							  <img src="./images/game/game2.png" alt="預覽圖"
+								   class="w-[500px] h-52 object-cover rounded-xl shadow-lg">
+                                <!-- 裝飾性圖表元素 -->
+                                <div class="absolute inset-4 border-2 border-white/30 rounded-2xl"></div>
+                                <!--div class="absolute top-8 left-8 right-8 h-6 bg-white/20 rounded"></div>
+                                <div class="absolute top-16 left-8 w-32 h-20 bg-white/10 rounded-lg"></div>
+                                <div class="absolute top-16 right-8 w-24 h-20 bg-white/10 rounded-lg"></div>
+                                <div class="absolute bottom-16 left-8 right-8 h-16 bg-white/10 rounded-lg flex items-end justify-around p-2">
+                                    <div class="w-4 bg-white/60 rounded-t" style="height: 60%"></div>
+                                    <div class="w-4 bg-white/60 rounded-t" style="height: 80%"></div>
+                                    <div class="w-4 bg-white/60 rounded-t" style="height: 40%"></div>
+                                    <div class="w-4 bg-white/60 rounded-t" style="height: 90%"></div>
+                                    <div class="w-4 bg-white/60 rounded-t" style="height: 70%"></div>
+                                </div-->
+                                
+                                <!-- 稀有度標籤 -->
+                                <div class="absolute top-4 right-4 bg-gradient-to-r from-purple-400 to-pink-500 text-white px-3 py-1 rounded-full text-sm font-bold shadow-lg">
+                                    ★☆☆☆☆
+                                </div>
+                                
+                                <!-- 懸浮效果 -->
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            </div>
+                            
+                            <!-- 作品資訊 -->
+                            <div class="p-8">
+                                <div class="flex items-center justify-between mb-4">
+                                    <h3 class="text-2xl font-bold text-purple-800">痛苦打字機</h3>
+                                    <div class="flex items-center space-x-1">
+                                        <span class="text-yellow-500">⭐</span>
+                                        <span class="text-purple-600 font-bold">1.0</span>
+                                    </div>
+                                </div>
+                                
+                                <p class="text-gray-600 mb-6 leading-relaxed">
+                                    為了不再被精靈們壓在地上打，獨苗哥布林決定踏上拯救部落的道路，一邊訓練鍵盤攻擊一邊學習英文，一起帶著兄弟們共同壯大
+                                </p>
+                                
+                                <!-- 技術標籤 -->
+                                <div class="flex flex-wrap gap-2 mb-6">
+                                    <span class="bg-gradient-to-r from-green-500 to-teal-600 text-white px-3 py-1 rounded-full text-sm font-medium">JavaScript</span>
+                                    <!--span class="bg-gradient-to-r from-orange-500 to-red-600 text-white px-3 py-1 rounded-full text-sm font-medium">D3.js</span>
+                                    <span class="bg-gradient-to-r from-yellow-500 to-orange-600 text-white px-3 py-1 rounded-full text-sm font-medium">Python</span>
+                                    <span class="bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-3 py-1 rounded-full text-sm font-medium">FastAPI</span-->
+                                </div>
+                                
+                                <!-- 特色功能 -->
+                                <div class="space-y-2 mb-6">
+                                    <div class="flex items-center text-sm text-gray-600">
+                                        <span class="w-2 h-2 bg-pink-500 rounded-full mr-3"></span>
+                                        練習英打
+                                    </div>
+                                    <div class="flex items-center text-sm text-gray-600">
+                                        <span class="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>
+                                        小廢廢劇情在前情提要
+                                    </div>
+                                    <div class="flex items-center text-sm text-gray-600">
+                                        <span class="w-2 h-2 bg-teal-500 rounded-full mr-3"></span>
+                                        沒音樂(音檔很難用饒了我吧
+                                    </div>
+                                </div>
+                                
+                                <!-- 行動按鈕 -->
+                                <div class="flex space-x-4">
+                                    <button class="jump-btn flex-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white py-3 rounded-2xl font-medium hover:shadow-lg transition-all duration-300 hover:scale-105" data-url="https://lin0010.github.io/JS_Final_Project/">
+                                        開始遊戲
+                                    </button>
+                                    <button class="jump-btn px-6 py-3 border-2 border-pink-300 text-pink-600 rounded-2xl font-medium hover:bg-pink-50 transition-colors" data-url="https://lin0010.github.io/JS_Final_Project/L1/index.html">
+                                        跳過介紹
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- 更多作品提示 -->
+                <div class="text-center mt-16">
+                    <div class="bg-white/60 backdrop-blur-sm rounded-3xl p-8 border border-white/50 inline-block">
+                        <h3 class="text-xl font-bold text-purple-800 mb-4">🎮 解鎖更多遊戲</h3>
+                        <p class="text-gray-600 mb-6">還有更多精彩遊戲等待探索...</p>
+                        <!--button class="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-2xl font-medium hover:shadow-lg transition-all duration-300 hover:scale-105">
+                            查看完整作品集
+                        </button-->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 聯絡方式 -->
+        <section id="contact" class="py-20 px-6 bg-white/60">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl font-light mb-8 text-pink-800">💌 聯絡我</h2>
+                <p class="text-lg text-gray-600 mb-12 max-w-2xl mx-auto">
+                    有事沒事都來：D
+                </p>
+                <div class="grid md:grid-cols-3 gap-8 mb-12">
+					<a href="mailto:hate233456@gmail.com">
+                    <div class="p-6 rounded-2xl hover:bg-pink-50 transition-colors">
+                        <div class="w-12 h-12 mx-auto mb-4 bg-pink-100 rounded-full flex items-center justify-center">
+                            <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-medium mb-2 text-pink-800">電子郵件</h3>
+                        <p class="text-gray-600">hate233456@gmail.com</p>
+                    </div>
+					</a>
+
+					<a href="https://www.threads.net/@xin_550052" target="_blank">
+                    <div class="p-6 rounded-2xl hover:bg-pink-50 transition-colors">
+                        <div class="w-12 h-12 mx-auto mb-4 bg-pink-100 rounded-full flex items-center justify-center"> <!--div>text-pink-600 原本改色但似乎會觸碰Meta 的 Brand Guidelines</div-->
+							<svg aria-label="Threads" viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor"><path class="x19hqcy" d="M141.537 88.9883C140.71 88.5919 139.87 88.2104 139.019 87.8451C137.537 60.5382 122.616 44.905 97.5619 44.745C97.4484 44.7443 97.3355 44.7443 97.222 44.7443C82.2364 44.7443 69.7731 51.1409 62.102 62.7807L75.881 72.2328C81.6116 63.5383 90.6052 61.6848 97.2286 61.6848C97.3051 61.6848 97.3819 61.6848 97.4576 61.6855C105.707 61.7381 111.932 64.1366 115.961 68.814C118.893 72.2193 120.854 76.925 121.825 82.8638C114.511 81.6207 106.601 81.2385 98.145 81.7233C74.3247 83.0954 59.0111 96.9879 60.0396 116.292C60.5615 126.084 65.4397 134.508 73.775 140.011C80.8224 144.663 89.899 146.938 99.3323 146.423C111.79 145.74 121.563 140.987 128.381 132.296C133.559 125.696 136.834 117.143 138.28 106.366C144.217 109.949 148.617 114.664 151.047 120.332C155.179 129.967 155.42 145.8 142.501 158.708C131.182 170.016 117.576 174.908 97.0135 175.059C74.2042 174.89 56.9538 167.575 45.7381 153.317C35.2355 139.966 29.8077 120.682 29.6052 96C29.8077 71.3178 35.2355 52.0336 45.7381 38.6827C56.9538 24.4249 74.2039 17.11 97.0132 16.9405C119.988 17.1113 137.539 24.4614 149.184 38.788C154.894 45.8136 159.199 54.6488 162.037 64.9503L178.184 60.6422C174.744 47.9622 169.331 37.0357 161.965 27.974C147.036 9.60668 125.202 0.195148 97.0695 0H96.9569C68.8816 0.19447 47.2921 9.6418 32.7883 28.0793C19.8819 44.4864 13.2244 67.3157 13.0007 95.9325L13 96L13.0007 96.0675C13.2244 124.684 19.8819 147.514 32.7883 163.921C47.2921 182.358 68.8816 191.806 96.9569 192H97.0695C122.03 191.827 139.624 185.292 154.118 170.811C173.081 151.866 172.51 128.119 166.26 113.541C161.776 103.087 153.227 94.5962 141.537 88.9883ZM98.4405 129.507C88.0005 130.095 77.1544 125.409 76.6196 115.372C76.2232 107.93 81.9158 99.626 99.0812 98.6368C101.047 98.5234 102.976 98.468 104.871 98.468C111.106 98.468 116.939 99.0737 122.242 100.233C120.264 124.935 108.662 128.946 98.4405 129.507Z"></path></svg>
+						</div>
+                        <h3 class="font-medium mb-2 text-pink-800">Threads</h3>
+                        <p class="text-gray-600">星螢</p>
+                    </div>
+					</a>
+
+					<a href="https://www.instagram.com/xin_550052/?hl=zh-tw" target="_blank">
+                    <div class="p-6 rounded-2xl hover:bg-pink-50 transition-colors">
+                        <div class="w-12 h-12 mx-auto mb-4 bg-pink-100 rounded-full flex items-center justify-center">
+                            <svg class="w-6 h-6 text-black" fill="black" stroke="currentColor" viewBox="0 0 24 24">
+                                <path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z"/>
+							</svg>
+                        </div>
+                        <h3 class="font-medium mb-2 text-pink-800">IG</h3>
+                        <p class="text-gray-600">星螢(連絡用暫時不經營)</p>
+                    </div>
+					</a>
+                </div>
+                <!--div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="mailto:hello@example.com" class="bg-gradient-to-r from-pink-500 to-purple-500 text-white px-8 py-3 rounded-full hover:shadow-lg transition-all hover-lift">
+                        發送郵件
+                    </a>
+                    <a href="#" class="border-2 border-pink-300 text-pink-600 px-8 py-3 rounded-full hover:bg-pink-100 hover:border-pink-400 transition-all hover-lift">
+                        下載履歷
+                    </a>
+                </div-->
+            </div>
+        </section>
+    </main>
+
+    <!-- 頁尾 -->
+    <footer class="bg-gradient-to-r from-pink-500 to-purple-600 text-white py-12 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <p class="text-white/70 mb-6">  👀 你竟然滑到這裡來了！<br>獎勵你一個誇獎我的機會(X</p>
+            <!--div class="flex justify-center space-x-6">
+                <a href="#" class="text-white/70 hover:text-white transition-colors">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                    </svg>
+                </a>
+                <a href="#" class="text-white/70 hover:text-white transition-colors">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg>
+                </a>
+                <a href="#" class="text-white/70 hover:text-white transition-colors">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24c6.624 0 11.99-5.367 11.99-11.987C24.007 5.367 18.641.001.012.001z"/>
+                    </svg>
+                </a>
+            </div-->
+        </div>
+    </footer>
+<script src="main.js"></script>
+</html>

@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+body { font-family: 'Inter', sans-serif; }
+.fade-in { animation: fadeIn 0.8s ease-in; }
+@keyframes fadeIn {
+	from { opacity: 0; transform: translateY(20px); }
+	to { opacity: 1; transform: translateY(0); }
+}
+.hover-lift:hover { transform: translateY(-2px); }
+.section-divider { background: linear-gradient(90deg, transparent, #d4c4d8, transparent); }
+.morandi-gradient { background: linear-gradient(135deg, #c8a8d8, #b8a0c8, #a898b8); }
+.morandi-purple { background-color: #b8a0c8; }
+.morandi-light { background-color: #e8dce8; }
+.morandi-text { color: #6b5b73; }
+.morandi-sage { background-color: #b8c4b8; }
+.morandi-dusty-rose { background-color: #d4b8c4; }
+.morandi-warm-gray { background-color: #c4c0b8; }
+.morandi-soft-blue { background-color: #a8b8c8; }
+
+/* 乙女風格動畫 */
+.sparkle {
+	animation: sparkle 2s infinite;
+}
+@keyframes sparkle {
+	0%, 100% { opacity: 0.3; transform: scale(0.8); }
+	50% { opacity: 1; transform: scale(1.2); }
+}
+
+.float {
+	animation: float 3s ease-in-out infinite;
+}
+@keyframes float {
+	0%, 100% { transform: translateY(0px); }
+	50% { transform: translateY(-10px); }
+}
+
+.heart-beat {
+	animation: heartBeat 1.5s ease-in-out infinite;
+}
+@keyframes heartBeat {
+	0%, 100% { transform: scale(1); }
+	50% { transform: scale(1.1); }
+}
+
+/* Flip card 基本樣式 */
+.flip-wrap { perspective: 1000px; }
+.flip-3d { transform-style: preserve-3d; transition: transform .6s; }
+.flip-3d.is-flipped { transform: rotateY(180deg); }
+.flip-face { backface-visibility: hidden; }
+.flip-back { transform: rotateY(180deg); }
+/* Flip 相容性補強（Safari） */
+.flip-face { backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+.flip-3d { transform-style: preserve-3d; -webkit-transform-style: preserve-3d;
+           transition: transform .6s; -webkit-transition: -webkit-transform .6s; }
+.flip-3d.is-flipped { transform: rotateY(180deg); -webkit-transform: rotateY(180deg); }
+
+@keyframes bob {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+.bounce-slow { animation: bob 1.6s ease-in-out infinite; }
+
+/* 全部貼文圖上限寬度 */
+.post-image { aspect-ratio:1; object-fit:cover;max-width: 240px; margin-inline: auto; display: block; }
+
+.heart-animation{ animation:heartBeat .3s ease-in-out; }
+@keyframes heartBeat{ 0%{transform:scale(1)} 50%{transform:scale(1.2)} 100%{transform:scale(1)} }
+
+.carousel-viewport { overflow:hidden; }
+.carousel-container > .post-image { flex: 0 0 100%; }
+.carousel-slide { flex: 0 0 100%; box-sizing: border-box; } /* 每頁仍是 100% 寬 */
+
+
+
